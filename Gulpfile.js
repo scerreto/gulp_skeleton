@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');  
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
+var uglify = require('gulp-uglify');
+var cssnano = require('gulp-cssnano');
+var gulpIf = require('gulp-if');
 
 gulp.task('sass', function () {  
     gulp.src('app/sass/style.scss')
@@ -17,9 +20,12 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('useref', function(){
+gulp.task('build', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
+    // Minifies only if it's a JavaScript file
+    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
 
