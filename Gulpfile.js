@@ -2,11 +2,22 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');  
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var cssnano = require('gulp-cssnano');
-var gulpIf = require('gulp-if');
 var imagemin = require('gulp-imagemin');
 var del = require('del');
+const minify = require('gulp-minify');
+const cleanCSS = require('gulp-clean-css');
+
+gulp.task('minify-css', () => {
+    return gulp.src('app/css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('minify-js', function() {
+    gulp.src(['app/js/*.js'])
+        .pipe(minify())
+        .pipe(gulp.dest('dist/js'))
+});
 
 gulp.task('sass', function () {  
     gulp.src('app/sass/*.scss')
@@ -37,17 +48,19 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 })
 
-gulp.task('useref', function(){
+gulp.task('index', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
-    // Minifies only if it's a JavaScript file
-    .pipe(gulpIf('*.js', uglify()))
-    // Minifies only if it's a CSS file
-    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('build', [`clean`, `sass`, `useref`, `images`, `fonts`], function (){
+gulp.task('pages', function(){
+    return gulp.src('app/pages/*.html')
+        .pipe(useref())
+        .pipe(gulp.dest('dist/pages'))
+});
+
+gulp.task('build', [`clean`, `sass`, `index`, `images`, `fonts`, `minify-css`, `minify-css`, `pages`], function (){
   console.log('Building files');
 })
 
