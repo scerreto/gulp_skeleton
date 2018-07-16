@@ -5,5 +5,8 @@
   src: url("../fonts/Raleway/Raleway-Light.eot");
   src: url("../fonts/Raleway/Raleway-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-Light.ttf") format("truetype"), url("../fonts/Raleway/Raleway-Light.svg#Raleway") format("svg"); }
 
+body {
+  font-size: 22px; }
+
 p {
   font-family: "Raleway"; }

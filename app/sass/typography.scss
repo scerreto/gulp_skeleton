@@ -1,6 +1,10 @@
 @import "_mixins.scss";
 @include font-face(Raleway,'../fonts/Raleway/Raleway-Light');
 
+body {
+    font-size: 22px;
+}
+
 p {
     font-family: "Raleway";
 }
