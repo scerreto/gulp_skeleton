@@ -6,8 +6,9 @@ function fetch_text (url) {
 }
 
 function load (page,event) {
-  console.log(page);
+
   (event || window.event).preventDefault();
+
   fetch_text(`pages/${page}.html`).then((html) => {
     document.getElementById("main_content").innerHTML = html;
   }).catch((error) => {
