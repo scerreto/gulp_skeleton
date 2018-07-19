@@ -1,6 +1,8 @@
-Gulp project
+<h1>Gulp project</h1>
 
-HTML, SASS, JS gulp skeleton
+<h2>HTML, SASS, JS gulp skeleton</h2>
+
+<p>This repo contains a skeleton for a single page web site, and a series of javascript exercises.</p>
 
 step:
 1. Clone the repo
@@ -13,7 +15,7 @@ Gulp documentation and examples <a href="https://gulpjs.org/">https://gulpjs.org
 <br>
 Js documentation <a href="https://developer.mozilla.org/it/">https://developer.mozilla.org</a> , <a href="https://www.w3schools.com/js/default.asp"> https://www.w3schools.com/js/default.asp </a>
 <br>
-This repo contains a skeleton for a single page web site, and a series of javascript exercises.
+
 
 - main.js : exercise for funzioni page
 - menu.js : menu management
