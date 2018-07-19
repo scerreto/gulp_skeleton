@@ -1,0 +1,44 @@
+<h1> DOM: definizione </h1>
+<p> Il DOM, come dice la parola stessa (Document Object Model) &eacute; un modello, ovvero un modo di rappresentare un documento.</p>
+
+    <p>
+        Tramite il DOM possiamo accedere ai tag img direttamente, senza attraversare la catena gerarchica delle sequenza padre-figlio.
+        Il tutto grazie all'oggetto <strong>documetn</strong>.
+    </p>
+<div>
+    <p> <code> &lt;html&gt; </code> </p>
+    <p><code> &lt;body&gt;</code></p>
+    <p style="padding-left: 30px"><code> &lt;div id=”immagini”&gt;&lt;img src=”fotografia.jpg”&gt;&lt;/div&gt;</code></p>
+    <p><code> &lt;/body&gt;</code></p>
+
+    <p><code> &lt;/html&gt;</code></p>
+</div>
+<html>
+
+<body>
+
+<div id="immagini"><img src="images/pic.jpg"></div>
+
+</body>
+
+</html>
+
+<p> Catena: </p>
+<p> html > body > div > img </p>
+<p> DOM object:</p>
+<p> document.images[0].src </p>
+
+<div class="button__example" onclick="alert(document.images[0].src)">
+    Show image src
+</div>
+
+<div class="button__example" onclick="console.log(document)">
+    Show document
+</div>
+
+<div>
+    <p>Le API dell'oggetto document sono documentate sul web <a href="https://www.w3schools.com/js/js_htmldom_methods.asp">w3schools</a>.</p>
+    <p> <strong> In conclusione: </strong> </p>
+    <p> Il DOM non &eacute; JavaScript. Vale semmai il contrario: JavaScript &eacute; un linguaggio che permette accesso al DOM, ad esempio mediante i comandi che abbiamo visto sopra </p>
+    <p> Il DOM &eacute; dinamico. E' possibile cambiare o aggiungere elementi al DOM, modificando la pagina dopo averla visualizzata nel browser </p>
+</div>

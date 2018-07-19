@@ -33,6 +33,67 @@ body {
 	}
 }
 
+.button__example {
+	display:inline-block;
+	color:#444;
+	border:1px solid #CCC;
+	background:#DDD;
+	box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+	cursor:pointer;
+	vertical-align:middle;
+	max-width: 100px;
+	padding: 5px;
+	text-align: center;
+}
+
+.button__example:active {
+	color:red;
+	box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+
+.hide__div {
+	display: none;
+}
+
 #img_main {
-	width: 100%
-;}
+	width: 100%;
+}
+
+#demo {
+	color:red;
+}
+
+//Slide Show
+#showContainer {
+	/* Main wrapper for all images */
+	width: 670px;
+	padding: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+.navButton {
+	/* Make buttons look nice */
+	cursor: pointer;
+	float: left;
+	width: 25px;
+	height: 22px;
+	padding: 10px;
+	margin-right: 5px;
+	overflow: hidden;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	background: #000000;
+	opacity: 0.65;
+	user-select: none;
+}
+.navButton:hover {
+	opacity: 1;
+}
+.imageContainer:not(:first-child) {
+	/* Hide all images except the first */
+	display: none;
+}
