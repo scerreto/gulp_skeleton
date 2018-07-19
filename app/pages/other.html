@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/otherJs.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/typography.css">
+</head>
+<p>
+    <h1> Exercises Page </h1>
+    <p><strong> Listener on a specific ID </strong></p>
+    <div class="button__example" id="myBtn1" onclick="window.history.back()">Back</div>
+    <div class="button__example" id="myBtn2">Try it</div>
+
+    <p><strong> Listener on a specific TAG </strong></p>
+    <button id="btn_1">Button 1</button>
+    <button id="btn_2">Button 2</button>
+
+    <div id="this__operator" class="hide__div">
+        <p> L&rsquo;oggetto this rappresenta normalmente l&rsquo;elemento su cui si &eacute; verificato l&rsquo;evento corrente.
+            Tuttavia questo non &eacute; sempre vero, come vedremo più avanti quando parleremo del flusso di propagazione degli eventi.
+            Inoltre, l&rsquo;oggetto this non ci consente di avere informazioni specifiche sull’evento.
+            Il DOM prevede che ad ogni gestore di eventi venga passato come parametro l&rsquo;oggetto event contenente informazioni su di esso.
+            Alcune di queste informazioni sono generiche, cio&eacute; presenti per qualsiasi tipo di evento, altre sono specifiche per il particolare evento.
+        </p>
+    </div>
+    <div id ="nextEx__btn" class="button__example hide__div"> Next example </div>
+
+    <p> <strong>JavaScript Can Validate Input</strong> </p>
+
+    <p>Please input a number between 1 and 10:</p>
+
+    <input id="numb">
+
+    <button type="button" id="form__validate">Submit</button>
+
+    <p id="demo"></p>
+
+    <label>Choose an ice cream flavor:
+        <select id="ice-cream" name="ice-cream">
+            <option value="">Select One ...</option>
+            <option value="chocolate">Chocolate</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="vanilla">Vanilla</option>
+        </select>
+    </label>
+
+
+    <p><strong> Last Example jQuery </strong></p>
+    <div id="showContainer">
+
+        <div class="imageContainer" id="im_1">
+            <img src="../images/1.jpg" />
+            <div class="caption">
+                Naples 1
+            </div>
+        </div>
+
+        <div class="imageContainer" id="im_2">
+            <img src="../images/2.jpg" />
+            <div class="caption">
+                Naples 2
+            </div>
+        </div>
+
+        <div class="imageContainer" id="im_3">
+            <img src="../images/3.jpg" />
+            <div class="caption">
+                Naples 3
+            </div>
+        </div>
+
+        <div class="navButton" id="previous">&#10094;</div>
+        <div class="navButton" id="next">&#10095;</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<h1>Funzioni</h1>
+
+<p> Le funzioni che utilizzano il dom, ci permettono di: </p>
+
+<p> <strong> Ricercare oggetti nella pagina web (query) </strong> </p>
+<li> id getElementById("id_elemento")</li>
+<li> tag document.getElementsByTagName("tag_name") </li>
+<li> class document.getElementsByClassName("class")</li>
+
+<p> <strong> Cambiare gli elementi HTM </strong> </p>
+<li> element.innerHTM </li>
+<li> element.attribute = new value </li>
+<li> element.setAttribute(attribute, value) </li>
+<li> element.style.property = new style  </li>
+
+<p> <strong> Aggiungere ed eliminare elementi </strong> </p>
+<li> document.createElement(element) </li>
+<li> document.removeChild(element) </li>
+<li> document.appendChild(element) </li>
+<li> document.replaceChild(element) </li>
+<li> document.write(text) </li>
+
+<p> <strong> Altre funzioni importanti </strong></p>
+<li> <a href="https://www.w3schools.com/js/js_htmldom_elements.asp"> Dom Elements </a> </li>
+<li> <a href="https://www.w3schools.com/js/js_htmldom_html.asp"> Dom HTML </a> </li>
+<li> <a href="https://www.w3schools.com/js/js_htmldom_events.asp"> Dom Events </a> </li>
+<li> <a href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp"> Dom Event Listener </a> </li>
+
+<p> <strong> Esempio 1 </strong></p>
+
+    <div  class="button__example" id="example__show" onclick="exampleShow()">
+        Show div
+    </div>
+
+    <div class="button__example" id="example__hide" onclick="exampleHide()">
+        Hide div
+    </div>
+
+
+<div id="test__div" class="hide__div">
+    <p> Test div show/hide. </p>
+    <div id="show-content__div"> TESTO 1, TESTO 2</div>
+</div>
+
+<p> <strong> Esempio 2 Single button </strong></p>
+<div  class="button__example" id="example2__show" onclick="exampleShowHide()">
+    Show div
+</div>
