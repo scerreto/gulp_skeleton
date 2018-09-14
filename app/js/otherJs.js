@@ -35,6 +35,8 @@ window.addEventListener('DOMContentLoaded', function() {
     // Anonymous function
     let handler = function() {
         // This
+        console.log(event);
+        console.log(event.target);
         console.log(this.id);
         console.log("Clic su " + this.innerHTML);
         if (this.id === "btn_1" ) {

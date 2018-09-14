@@ -97,3 +97,26 @@ body {
 	/* Hide all images except the first */
 	display: none;
 }
+
+.cl_container {
+display: table;
+    width: 200px;
+}
+
+.cl_container > div {
+	width: 50px;
+	background-image:url("../images/0irk1wZ.png");
+    float: left;
+    padding-right: 10px;
+    height: 50px;
+    display:table;
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    
+}
+
+.active
+{
+background-image:url("../images/red-dot2.png")!important;
+}
